@@ -1,8 +1,7 @@
 .container{
   background-color: purple;
-  width: 30%;
+  width: 40%;
   margin: 0 auto;
-  padding: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
