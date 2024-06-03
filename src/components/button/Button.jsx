@@ -1,11 +1,11 @@
 import { React, useState } from 'react'
 import './Button.css'
 
-function Button ({ task }){
+function Button ({ task, setList }){
     return(
         <>
-            <button onClick={() => {
-
+            <button className='button' onClick={() => {
+                setList(task)
             }}>Add Task</button>
         </>
     )

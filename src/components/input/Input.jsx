@@ -6,11 +6,11 @@ function Input ({ setTask, task }){
     console.log(task)
     return(
         <>
-            <input
-            className='input'
-            placeholder='Ingresa una tarea'
-            value={task}
-            onChange={(e) => {setTask(e.target.value)}}
+                <input
+                className='input'
+                placeholder='Ingresa una tarea'
+                value={task}
+                onChange={(e) => {setTask(e.target.value)}}
             />
         </>
     )
