@@ -5,14 +5,14 @@ import { Input } from './components/input/Input'
 import { Item } from './components/item/Item'
 import { TodoList } from './components/todoList/TodoList'
 
-const todos = [
+let todos = [
   {
     text: 'Ir a la oficina',
-    completed: true
+    completed: false
   },
   {
     text: 'Pasear al perro',
-    completed: true
+    completed: false
   },
   {
     text: 'reparar la computadora',
@@ -29,7 +29,6 @@ function App() {
 
   const totalTodos = list.length; //ALMACENAMOS EN VARIABLE LA CANTIDAD DE TODOS QUE ESTAN EN LA LSITA
 
-
   const searchedTodos = list.filter((todo) => {
     const todoText = todo.text.toLowerCase();
     const searchText = task.toLowerCase()
@@ -40,22 +39,14 @@ function App() {
 
 // console.log(task)
 
-  const completeTodo = (text) => {
-
-    const newTodos = [...list]; //Los tres puntos nos ayudan a clonar el array que esta en list
-
-    const index = newTodos.findIndex((todo) => { //El mentodo finIndex nos retornara el indice donde esta el elemento que le hicimos la validacion
-      todo.text === text;
-
-    })
-
-    newTodos[index].completed = true;
-
-    setList(newTodos)
-
-    // console.log('se completo la tarea')
-  
-  }
+  // const completeTodo = (text) => {
+  //   const newTodos = [...list] //Creamos una copia del array con los todos
+  //   const todoIndex = newTodos.findIndex((todo)=>{
+  //     todo.text == text
+  //   })
+  //   newTodos[Index].completed = true;
+  //   setList(newTodos)
+  // }
 
   return (
     <>
@@ -64,34 +55,13 @@ function App() {
         <p className='titleList'>Haz completado {completedTodos.length} de {totalTodos}</p>
         <form className='input'>
           <Input setTask={ setTask } task={ task }/>
-          < Button task={ task} setList={setList} />
+          < Button task={task} setList={setList} list={list} setTask={setTask} />
         </form>
-
         <TodoList>
-
           {
-
               searchedTodos.map((element) => {
-
-              return <Item
-              
-                // onCompleted={
-
-                // () => {
-
-                //   return completeTodo(element.todo)
-
-                //   }}
-                
-                name={element.text}
-                setList={setList}
-                
-                //completed={element.completed} key={element.text}
-                
-              />
-                
+                return <Item key={element.text} name={element.text} setList={setList} list={list} task={task}/* completed={element.completed} key={element.text} */ />  
             })
-
           }
 
         </TodoList>

@@ -1,11 +1,19 @@
 import { React, useState } from 'react'
 import './Button.css'
 
-function Button ({ task, setList }){
+function Button ({ task, setTask, list }){
     return(
         <>
-            <button className='button' onClick={() => {
-                setList(task)
+            <button className='button' onClick={(e) => {
+                e.preventDefault();
+
+                list.push({
+                    text: task,
+                    completed: false
+                })
+
+                setTask('');
+
             }}>Add Task</button>
         </>
     )
