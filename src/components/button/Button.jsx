@@ -18,4 +18,5 @@ function Button ({ task, setTask, list }){
         </>
     )
 }
+
 export { Button }

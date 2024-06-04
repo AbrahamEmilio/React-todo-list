@@ -11,6 +11,11 @@ function Item({ name, key, setList, list}){
             return todo.text == name;
         })
 
+        function itemFinished(){
+            arrayNuevo[taskD].completed = true;
+            setList(arrayNuevo)
+        }
+
         function deletedItem(){
             arrayNuevo.splice(taskD, 1)
             setList(arrayNuevo)
@@ -21,8 +26,7 @@ function Item({ name, key, setList, list}){
             <li className='item' key={key}>
                 <div className='itemContainer'>
                     <div className='checkContainer' onClick={() => {
-                        arrayNuevo[taskD].completed === true;
-                        console.log(arrayNuevo[taskD].completed)
+                        itemFinished()
                     }}>
                         <img className='check' src={check} alt="" />
                     </div>

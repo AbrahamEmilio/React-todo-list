@@ -30,17 +30,32 @@
     cursor: pointer;
 }
 
+.check:hover{
+    opacity: 50%;
+}
+
 .cross{
     width: 20px;
     cursor: pointer;
 }
 
+.cross:hover{
+    opacity: 50%;
+}
+
+
 .crossContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
     width: 10%;
 }
 
 .checkContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 10%;
 }
 
@@ -53,9 +68,11 @@
 }
 
 .nameIncompleted{
-    color: red;
+    color: white;
 }
 
 .nameCompleted{
-    color: blue;
+    color: white;
+    text-decoration: line-through;
+    opacity: 50%;
 }

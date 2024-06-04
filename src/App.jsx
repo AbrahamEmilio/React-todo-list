@@ -51,10 +51,11 @@ function App() {
   return (
     <>
       <div className='container'>
-        <h1 className='title'>TODO LIST</h1>
+        <h1 className='title'>Todo - List with React JS</h1>
+        <p className='description'>Add a new task that you need to do.</p>
         <p className='titleList'>Haz completado {completedTodos.length} de {totalTodos}</p>
-        <form className='input'>
-          <Input setTask={ setTask } task={ task }/>
+        <form className='form'>
+          <Input className='input' setTask={ setTask } task={ task }/>
           < Button task={task} setList={setList} list={list} setTask={setTask} />
         </form>
         <TodoList>
