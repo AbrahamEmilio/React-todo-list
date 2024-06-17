@@ -5,24 +5,24 @@ import { Input } from './components/input/Input'
 import { Item } from './components/item/Item'
 import { TodoList } from './components/todoList/TodoList'
 
-let todos = [
-  {
-    text: 'Ir a la oficina',
-    completed: false
-  },
-  {
-    text: 'Pasear al perro',
-    completed: false
-  },
-  {
-    text: 'reparar la computadora',
-    completed: false
-  }
-]
+// let todos = [
+//   {
+//     text: 'Ir a la oficina',
+//     completed: false
+//   },
+//   {
+//     text: 'Pasear al perro',
+//     completed: false
+//   },
+//   {
+//     text: 'reparar la computadora',
+//     completed: false
+//   }
+// ]
 
 function App() {
 
-  const [list, setList] = useState(todos); //CREAMOS USE STATE PARA LA LISTA DE TAREAS
+  const [list, setList] = useState([]); //CREAMOS USE STATE PARA LA LISTA DE TAREAS
   const [task, setTask] = useState(''); //CREAMOS USE STATE PARA LA TAREA
 
   const completedTodos = list.filter((todo) => !!todo.completed === true /*El signo de admiracion doble convierte en booleanos cualquier valor*/ ) //CREAMOS LA LISTA CON LOS TODOS COMPLETADOS

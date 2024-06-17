@@ -7,7 +7,7 @@ body{
   background: rgb(119,0,255);
   background: linear-gradient(275deg, rgba(119,0,255,1) 0%, rgba(0,215,255,1) 100%); 
   background-repeat: no-repeat;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,7 +24,8 @@ body{
   justify-content: center;
   border-radius: 40px;
   /* margin: 300px auto 0px auto; */
-  padding: 60px 50px;
+  padding: 100px 50px;
+  margin: 100px 0px;
 
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
   backdrop-filter: blur(20px);
